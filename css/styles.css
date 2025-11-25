@@ -7,9 +7,16 @@
     --color-button-text: #ffffff; /* Texto del botón */
 }
 
-/* 🖼️ Clase para la imagen de fondo */
-.bg-hero {
-    background-image: url('uploaded:01_Banner.jpg-3fe3b098-b191-4f0b-a999-75781d10148b'); /* Usando la imagen adjunta */
+/* Estilos específicos para asegurar que se vea "tal cual" */
+.hero-bg {
+    /* IMPORTANTE: Asegúrate de que '01_Banner.jpg' esté en la misma carpeta que este HTML */
+    background-image: url('01_Banner.jpg'); 
     background-size: cover;
-    background-position: center;
+    background-position: center bottom; /* Ajustado para ver el agua como en la foto */
+    background-repeat: no-repeat;
+}
+
+/* Fallback por si la imagen no carga inmediatamente al probar */
+.hero-bg-fallback {
+    background-color: #232F3E;
 }
