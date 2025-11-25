@@ -4,154 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS User Group Vancouver</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body class="font-sans antialiased">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
-    <section class="relative bg-hero h-screen flex items-center justify-center text-white">
-        <div class="absolute inset-0 bg-black/50"></div> 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        aws: {
+                            orange: '#FF9900', // El naranja exacto de la marca
+                            dark: '#232F3E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos específicos para asegurar que se vea "tal cual" */
+        .hero-bg {
+            /* IMPORTANTE: Asegúrate de que '01_Banner.jpg' esté en la misma carpeta que este HTML */
+            background-image: url('01_Banner.jpg'); 
+            background-size: cover;
+            background-position: center bottom; /* Ajustado para ver el agua como en la foto */
+            background-repeat: no-repeat;
+        }
         
-        <nav class="absolute top-0 left-0 right-0 py-4 px-6 md:px-12 flex items-center justify-between z-20">
-            <div class="flex items-center">
-                <span class="text-xl font-bold flex items-center">
-                    <span class="mr-2 text-2xl font-extrabold" style="color: var(--color-primary);">AWS</span>
-                    UG
-                </span>
-            </div>
-            <ul class="hidden md:flex space-x-6 text-sm lg:text-base font-medium">
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">About</a></li>
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">Events</a></li>
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">Community Day</a></li>
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">Get Involved</a></li>
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">Partners</a></li>
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">Sponsors</a></li>
-                <li><a href="#" class="hover:text-yellow-400 transition duration-150">FAQ</a></li>
-            </ul>
-            </nav>
+        /* Fallback por si la imagen no carga inmediatamente al probar */
+        .hero-bg-fallback {
+            background-color: #232F3E;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-white">
 
-        <div class="relative z-10 container mx-auto px-6 text-center pt-24">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
-                <span class="text-white">aws</span> <span style="color: var(--color-primary);">USER GROUP</span>
-                <br>
-                <span class="text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-wider">VANCOUVER</span>
-            </h1>
-            <p class="text-base sm:text-xl max-w-3xl mx-auto mb-8 font-light">
-                We run regular meetups in downtown Vancouver and the annual Vancouver AWS Community Day. We also co-hosting Canada's largest Cloud and AI conference in Vancouver and Toronto Cloud Summit
+    <section class="relative h-screen w-full hero-bg hero-bg-fallback flex flex-col">
+        
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+        <header class="relative z-10 w-full px-8 py-6 flex justify-between items-center max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.004 0L12 0.004V3.86l-2.074-1.638-1.786 3.036 3.125 1.543-3.176 1.436 1.259 3.292 2.652-0.65v3.18H7.32l-0.748-2.607-3.23 0.692 2.373 4.673H2.03l0.395 1.634h3.945l-0.548 1.966h2.26L9.69 14.522l1.393 2.067v7.407h1.833v-7.407l1.394-2.067 1.608 5.894h2.26l-0.549-1.966h3.945l0.396-1.634h-3.686l2.373-4.673-3.231-0.692-0.748 2.607h-4.68v-3.18l2.652 0.65 1.258-3.292-3.176-1.436 3.126-1.543-1.786-3.036-2.074 1.638V0z"/>
+                </svg>
+                <span class="text-2xl font-bold tracking-tight text-white">AWS UG</span>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 text-[15px] font-medium text-gray-200">
+                <a href="#" class="hover:text-aws-orange transition-colors">About</a>
+                <a href="#" class="hover:text-aws-orange transition-colors">Events</a>
+                <a href="#" class="hover:text-aws-orange transition-colors">Community Day</a>
+                <a href="#" class="hover:text-aws-orange transition-colors">Get Involved</a>
+                <a href="#" class="hover:text-aws-orange transition-colors">Partners</a>
+                <a href="#" class="hover:text-aws-orange transition-colors">Sponsors</a>
+                <a href="#" class="hover:text-aws-orange transition-colors">FAQ</a>
+            </nav>
+        </header>
+
+        <div class="relative z-10 flex-grow flex flex-col justify-center items-center text-center px-4 sm:px-6">
+            
+            <div class="mb-2 flex flex-col items-center">
+                <div class="flex items-end justify-center gap-3 mb-1">
+                    <div class="w-24 sm:w-28 mb-1">
+                         <svg viewBox="0 0 167 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M38.1691 69.1996C37.8118 70.8309 36.3813 72.0465 34.7042 72.0465H27.4208C25.4328 72.0465 23.9515 70.2464 24.3168 68.293L28.1633 47.7667C28.5206 46.1354 29.9511 44.9199 31.6282 44.9199H38.9116C40.8996 44.9199 42.3809 46.7199 42.0156 48.6734L38.1691 69.1996ZM66.446 47.7885C66.8113 46.1354 68.2498 44.9199 69.9269 44.9199H76.7645C78.7525 44.9199 80.2338 46.7199 79.8685 48.6734L76.014 69.2214C75.6567 70.8309 74.2182 72.0465 72.5411 72.0465H65.7035C63.7155 72.0465 62.2341 70.2464 62.5994 68.293L66.446 47.7885ZM99.8517 72.0465H90.875C89.1729 72.0465 87.7262 70.8091 87.3912 69.1415L84.8143 55.4395L81.5796 69.2577C81.1872 70.9109 79.7214 72.0465 78.0267 72.0465H68.8037C70.9575 62.2709 73.1114 52.488 75.2652 42.7125L84.6251 42.7198L87.202 56.4001L90.4367 42.7198H99.7966L93.8587 69.1415C95.854 69.1415 97.8566 69.1415 99.8517 69.1415V72.0465ZM23.4836 69.1415L20.9067 55.4395L17.672 69.2577C17.2796 70.9109 15.8138 72.0465 14.1191 72.0465H4.89613C7.04995 62.2709 9.20377 52.488 11.3576 42.7125L20.7175 42.7198L23.2944 56.4001L26.5291 42.7198H35.889L29.9511 69.1415C31.9464 69.1415 33.949 69.1415 35.9442 69.1415V72.0465H26.9675C25.2653 72.0465 23.8187 70.8091 23.4836 69.1415ZM59.9079 66.8285C59.5426 68.4598 58.1121 69.6754 56.435 69.6754H49.1516C47.1636 69.6754 45.6823 67.8753 46.0476 65.9219L47.2483 59.5432C47.6055 57.9118 49.036 56.6963 50.7131 56.6963H54.0277L54.6754 53.2415H50.9605C49.1557 53.2415 47.785 51.6487 48.1424 49.8885L48.4262 48.3684C48.7471 46.6664 50.3627 45.3781 52.0947 45.3781H63.6337C65.6217 45.3781 67.103 47.1782 66.7377 49.1316L65.537 55.5103C65.1798 57.1417 63.7492 58.3572 62.0721 58.3572H58.7502L58.1025 61.812H61.8174C63.6222 61.812 64.9929 63.4048 64.6355 65.1651L64.3516 66.6851C64.0307 68.3872 62.4151 69.6754 60.6831 69.6754H59.9079V66.8285ZM103.541 73.0866C96.2241 73.0866 91.5445 74.3303 90.9623 74.4539L89.4705 82.5273C90.2855 82.2655 95.7729 80.7017 101.998 80.7017C115.155 80.7017 116.88 88.6659 116.923 88.9496C117.076 89.8733 116.457 90.7243 115.548 90.877L115.395 90.8988C110.876 91.6407 100.994 92.7172 99.4293 83.3565C99.2765 82.4328 98.4032 81.8073 97.479 81.9601C96.5549 82.1128 95.9293 82.9861 96.0822 83.9102C98.3743 97.6422 113.678 95.6638 119.529 94.6237L119.988 94.5437C120.737 94.4055 121.283 93.7509 121.283 92.9872C121.283 92.9363 121.275 92.8926 121.268 92.8417C120.781 89.9106 118.991 73.0866 103.541 73.0866Z" fill="white"/>
+                            <path d="M83.9922 89.1023C83.2791 88.7532 82.4204 89.0441 82.0711 89.7573C81.7218 90.4704 82.0129 91.329 82.726 91.6783L88.9482 94.7249C89.5085 94.9993 90.1779 94.8829 90.6218 94.4391L94.6166 90.4443C95.1224 89.9384 95.1224 89.1182 94.6166 88.6124C94.1107 88.1065 93.2905 88.1065 92.7846 88.6124L89.7381 91.659L83.9922 89.1023Z" fill="#FF9900"/>
+                            <path d="M26.4673 89.1023C27.1804 88.7532 28.039 89.0441 28.3883 89.7573C28.7377 90.4704 28.4466 91.329 27.7334 91.6783L21.5113 94.7249C20.9509 94.9993 20.2815 94.8829 19.8377 94.4391L15.8428 90.4443C15.337 89.9384 15.337 89.1182 15.8428 88.6124C16.3487 88.1065 17.1689 88.1065 17.6748 88.6124L20.7213 91.659L26.4673 89.1023Z" fill="#FF9900"/>
+                             <path d="M19.9629 98.4146C19.9629 98.4146 36.8837 114.331 90.4962 98.4146C90.4962 98.4146 38.3319 108.331 19.9629 98.4146Z" fill="#FF9900"/>
+                        </svg>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-none tracking-tight">
+                        USER GROUP
+                    </h1>
+                </div>
+
+                <h2 class="text-5xl sm:text-6xl lg:text-7xl font-black text-aws-orange uppercase tracking-wide leading-tight">
+                    VANCOUVER
+                </h2>
+            </div>
+
+            <p class="max-w-3xl mx-auto mt-6 text-lg sm:text-xl text-white font-normal leading-relaxed opacity-95">
+                We run regular meetups in downtown Vancouver and the annual Vancouver AWS Community Day. We also co-hosting Canada's largest Cloud and AI conference in Vancouver and Toronto <strong>Cloud Summit</strong>
             </p>
-            <a href="#" class="inline-block py-3 px-10 rounded-full font-bold shadow-lg transform transition duration-300 hover:scale-105" style="background-color: var(--color-button-bg); color: var(--color-button-text);">
+
+            <a href="#" class="mt-10 inline-block bg-aws-orange text-black font-bold text-lg px-8 py-3 rounded-full hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Join Our Discord Channel
             </a>
         </div>
     </section>
-
-    <section id="events" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-10" style="color: var(--color-secondary);">Upcoming Events</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 mr-2" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <span class="font-bold text-sm" style="color: var(--color-primary);">Oct 26, 2024</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-secondary);">Monthly Cloud Meetup</h3>
-                    <p class="text-gray-600 mb-4 text-sm">Guest Speaker: Jane Doe on Serverless Architecture</p>
-                    <div class="flex items-center text-gray-500 text-sm">
-                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                        <span>Downtown Vancouver</span>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 mr-2" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <span class="font-bold text-sm" style="color: var(--color-primary);">Oct 26, 2024</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-secondary);">Monthly Cloud Meetup</h3>
-                    <p class="text-gray-600 mb-4 text-sm">Guest Speaker: Jane Doe on Serverless Architecture</p>
-                    <div class="flex items-center text-gray-500 text-sm">
-                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                        <span>Downtown Vancouver</span>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 mr-2" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <span class="font-bold text-sm" style="color: var(--color-primary);">Oct 26, 2024</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-secondary);">Monthly Cloud Meetup</h3>
-                    <p class="text-gray-600 mb-4 text-sm">Guest Speaker: Jane Doe on Serverless Architecture</p>
-                    <div class="flex items-center text-gray-500 text-sm">
-                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                        <span>Downtown Vancouver</span>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                 <a href="#" class="text-lg font-semibold hover:underline" style="color: var(--color-primary);">
-                    View All Events →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="stories" class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-10" style="color: var(--color-secondary);">Community Stories</h2>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <div class="text-center">
-                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-3 shadow-md" src="https://via.placeholder.com/150/0000FF/FFFFFF?text=P1" alt="Perfil 1">
-                    <p class="font-semibold mb-1" style="color: var(--color-secondary);">Ryan</p>
-                    <p class="text-xs text-gray-500">"Built my network"</p>
-                </div>
-                <div class="text-center">
-                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-3 shadow-md" src="https://via.placeholder.com/150/FF0000/FFFFFF?text=P2" alt="Perfil 2">
-                    <p class="font-semibold mb-1" style="color: var(--color-secondary);">Sarah</p>
-                    <p class="text-xs text-gray-500">"Testimonial two"</p>
-                </div>
-                <div class="text-center">
-                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-3 shadow-md" src="https://via.placeholder.com/150/00FF00/FFFFFF?text=P3" alt="Perfil 3">
-                    <p class="font-semibold mb-1" style="color: var(--color-secondary);">James</p>
-                    <p class="text-xs text-gray-500">"Ramp up on cloud"</p>
-                </div>
-                 <div class="text-center">
-                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-3 shadow-md" src="https://via.placeholder.com/150/FFFF00/000000?text=P4" alt="Perfil 4">
-                    <p class="font-semibold mb-1" style="color: var(--color-secondary);">Monet</p>
-                    <p class="text-xs text-gray-500">"Hired thanks to network"</p>
-                </div>
-                 <div class="text-center">
-                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-3 shadow-md" src="https://via.placeholder.com/150/00FFFF/000000?text=P5" alt="Perfil 5">
-                    <p class="font-semibold mb-1" style="color: var(--color-secondary);">Liam</p>
-                    <p class="text-xs text-gray-500">"Learned a lot"</p>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                 <a href="#" class="text-lg font-semibold hover:underline" style="color: var(--color-primary);">
-                    Share Your Story →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="sponsors" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-10" style="color: var(--color-secondary);">Our Sponsors</h2>
-            <div class="flex flex-wrap justify-center items-center gap-12">
-                <img src="https://via.placeholder.com/150x50?text=Sponsor+1" alt="Sponsor 1" class="h-10 opacity-75 hover:opacity-100 transition duration-300">
-                <img src="https://via.placeholder.com/150x50?text=Sponsor+2" alt="Sponsor 2" class="h-12 opacity-75 hover:opacity-100 transition duration-300">
-                <img src="https://via.placeholder.com/150x50?text=Sponsor+3" alt="Sponsor 3" class="h-14 opacity-75 hover:opacity-100 transition duration-300">
-                <img src="https://via.placeholder.com/150x50?text=Sponsor+4" alt="Sponsor 4" class="h-10 opacity-75 hover:opacity-100 transition duration-300">
-            </div>
-             <div class="text-center mt-10">
-                 <a href="#" class="text-lg font-semibold hover:underline" style="color: var(--color-primary);">
-                    Become a Sponsor →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="py-20 text-center text-gray-500">
-        <p>... Continúa con las secciones 5 a 10 aquí ...</p>
-    </div>
 
 </body>
 </html>
