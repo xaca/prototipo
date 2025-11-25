@@ -10,7 +10,7 @@
 /* Estilos específicos para asegurar que se vea "tal cual" */
 .hero-bg {
     /* IMPORTANTE: Asegúrate de que '01_Banner.jpg' esté en la misma carpeta que este HTML */
-    background-image: url('01_Banner.jpg'); 
+    background-image: url('../images/banner_bk.jpg'); 
     background-size: cover;
     background-position: center bottom; /* Ajustado para ver el agua como en la foto */
     background-repeat: no-repeat;
@@ -20,3 +20,4 @@
 .hero-bg-fallback {
     background-color: #232F3E;
 }
+
